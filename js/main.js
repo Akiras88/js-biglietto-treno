@@ -8,14 +8,33 @@ var km;
 var age;
 var fixedCost = 0.21;
 var cost;
-
+var discountSmall = 20;
+var discountBig = 40;
+var costSmall;
+var costBig;
 
 //  1- user input km and age
 var km = prompt('Inserisci quanti km vuoi percorrere');
-console.log(km)
+console.log('KM:' + km);
 var age = prompt('Quanti anni hai?');
-console.log(age)
+console.log('AGE:' + age);
 
 // 2- calculate cost for km
 var cost = km * fixedCost;
 console.log(cost);
+
+// 3 - calculate discount: 20% for under 18 years, 40% for over 60 years
+var costSmall = ((discountSmall * cost) / 100);
+console.log('DISCOUNT:'+ costSmall);
+var costBig = ((discountBig * cost) / 100);
+console.log('DISCOUNT:' + costBig);
+
+// 4 - print cost ticket with discount
+if (age < 18) {
+    console.log(cost - costSmall);
+} else if (age >= 65) {
+    console.log(cost - costBig);
+}
+else {
+    console.log(cost);
+}
