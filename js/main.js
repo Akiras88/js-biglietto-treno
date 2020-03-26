@@ -14,9 +14,9 @@ var costSmall;
 var costBig;
 
 //  1- user input km and age
-var km = prompt('Inserisci quanti km vuoi percorrere');
+var km = parseInt(prompt('Inserisci quanti km vuoi percorrere'));
 console.log('KM:' + km);
-var age = prompt('Quanti anni hai?');
+var age = parseInt(prompt('Quanti anni hai?'));
 console.log('AGE:' + age);
 
 // 2- calculate cost for km
